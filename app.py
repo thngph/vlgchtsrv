@@ -19,9 +19,7 @@ app.add_middleware(
 
 @app.get('/')
 async def hello_world():
-  return{
-    "hello":"world"
-  }
+  return {"Hello": "world"}
 
 @app.get('/get-transcript/{id}')
 async def get_transcript(id):
