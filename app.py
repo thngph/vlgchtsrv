@@ -17,6 +17,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get('/')
+async def hello_world():
+  return{
+    "hello":"world"
+  }
+
 @app.get('/get-transcript/{id}')
 async def get_transcript(id):
   try:
